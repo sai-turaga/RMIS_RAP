@@ -1,0 +1,19 @@
+projection implementation in class ZBP_C_GRC_OCCURENCE unique;
+strict ( 2 );
+use draft;
+define behavior for ZC_GRC_OCCURENCE alias ZcGrcOccurence
+use etag
+
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+
+  use action copy;
+}

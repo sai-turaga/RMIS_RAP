@@ -1,0 +1,12 @@
+@EndUserText: {
+  label: 'Service Definition for ZC_TGRC_XLS_USER'
+}
+@ObjectModel: {
+  leadingEntity: {
+    name: 'ZC_TGRC_XLS_USER'
+  }
+}
+define service ZUI_TGRC_XLS_USER_O4 {
+  expose ZC_TGRC_XLS_USER;
+  expose ZC_TGRC_SCR_CONTRL000;
+}

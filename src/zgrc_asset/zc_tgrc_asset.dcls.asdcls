@@ -1,0 +1,11 @@
+@EndUserText.label: 'Access Control For ZC_TGRC_ASSET'
+@MappingRole: true
+define role ZC_TGRC_ASSET {
+    grant
+        select
+            on
+                ZC_TGRC_ASSET;
+//                    where
+//                        inheriting conditions from entity ZR_TGRC_ASSET;
+                        
+}

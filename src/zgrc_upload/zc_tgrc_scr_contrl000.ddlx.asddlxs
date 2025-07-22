@@ -1,0 +1,182 @@
+@Metadata.layer: #CORE
+@UI.headerInfo: {
+    typeName: 'File Data',
+    typeNamePlural: 'File Data',
+    title: { type: #STANDARD, value: 'EndUser' },
+    description: { type: #STANDARD, value: 'FileId' }
+}
+annotate view ZC_TGRC_SCR_CONTRL000 with
+{
+  @UI.facet: [ {
+    label: 'General Information', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  } ]
+//  @UI.identification: [ {
+//    position: 10 
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 10 
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 10 
+//  } ]
+  @UI.lineItem: [{ type: #FOR_ACTION, label: 'Process Data', dataAction: 'processData' }
+                ,{ type: #FOR_ACTION, label: 'Upload Data', dataAction: 'uploadXLData' } // uncomment
+                 ]
+  EndUser;
+  
+  @EndUserText.label: 'FileId'
+  @UI.identification: [ {
+    position: 20 , 
+    label: 'FileId'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label: 'FileId'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+   @UI: { hidden: true }
+  FileId;
+  
+  @EndUserText.label: 'LineId'
+  @UI.identification: [ {
+    position: 30 , 
+    label: 'LineId'
+  } ]
+  @UI.lineItem: [ {
+    position: 30 , 
+    label: 'LineId'
+  } ]
+  @UI.selectionField: [ {
+    position: 30 
+  } ]
+   @UI: { hidden: true }
+  LineId;
+  
+  @EndUserText.label: 'LineNo'
+  @UI.identification: [ {
+    position: 40 , 
+    label: 'LineNo'
+  } ]
+  @UI.lineItem: [ {
+    position: 40 , 
+    label: 'LineNo'
+  } ]
+  @UI.selectionField: [ {
+    position: 40 
+  } ]
+  lineno;
+  
+  @EndUserText.label: 'Application'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Application'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+    label: 'Application'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  Application;
+  
+  @UI.identification: [ {
+    position: 60 
+  } ]
+  @UI.lineItem: [ {
+    position: 60 
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  RecordType;
+  
+  @EndUserText.label: 'RecordTypeDesc'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'RecordTypeDesc'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'RecordTypeDesc'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  RecordTypeDesc;
+  
+  @EndUserText.label: 'Fieldname'
+  @UI.identification: [ {
+    position: 80 , 
+    label: 'Fieldname'
+  } ]
+  @UI.lineItem: [ {
+    position: 80 , 
+    label: 'Fieldname'
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  Fieldname;
+  
+  @UI.identification: [ {
+    position: 90 
+  } ]
+  @UI.lineItem: [ {
+    position: 90 
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+  } ]
+  Control;
+  
+  @UI.identification: [ {
+    position: 100 
+  } ]
+  @UI.lineItem: [ {
+    position: 100 
+  } ]
+  @UI.selectionField: [ {
+    position: 100 
+  } ]
+  Createdby;
+  
+  @UI.identification: [ {
+    position: 110 
+  } ]
+  @UI.lineItem: [ {
+    position: 110 
+  } ]
+  @UI.selectionField: [ {
+    position: 110 
+  } ]
+  Createdat;
+  
+  @UI.identification: [ {
+    position: 120 
+  } ]
+  @UI.lineItem: [ {
+    position: 120 
+  } ]
+  @UI.selectionField: [ {
+    position: 120 
+  } ]
+  Lastchangedby;
+  
+  @UI.identification: [ {
+    position: 130 
+  } ]
+  @UI.lineItem: [ {
+    position: 130 
+  } ]
+  @UI.selectionField: [ {
+    position: 130 
+  } ]
+  Lastchangedat;
+}

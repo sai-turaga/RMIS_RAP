@@ -1,0 +1,5 @@
+@EndUserText.label: 'Dummy Service Definition for Claims'
+define service ZUI_TGRC_CLAIM_O4_DUMMY {
+  expose ZC_TGRC_CLAIM_DUMMY     as Claim;
+  expose ZC_TGRC_CLAIM_TRN_DUMMY as ClaimTxn;
+}

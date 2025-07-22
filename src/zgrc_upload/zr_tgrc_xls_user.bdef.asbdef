@@ -1,0 +1,152 @@
+managed implementation in class ZBP_R_TGRC_XLS_USER unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_TGRC_XLS_USER alias XLHead
+persistent table ZTGRC_XLS_USER
+extensible
+draft table ZTGRC_XLS_USER_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+
+{
+// association _XLData { create; with draft; }
+
+////  field ( mandatory : create )
+////   EndUser;
+////
+////  field ( readonly )
+////   FileId,
+////   LocalCreatedBy,
+////   LocalCreatedAt,
+////   LocalLastChangedBy,
+////   LocalLastChangedAt,
+////   LastChangedAt;
+////
+////  field ( numbering : managed )
+////   FileId;
+////
+////  field ( readonly : update )
+////   EndUser;
+////
+////
+////  create;
+////  update;
+////  delete;
+////
+////  draft action Activate optimized;
+////  draft action Discard;
+////  draft action Edit;
+////  draft action Resume;
+////  draft determine action Prepare;
+
+  create;
+  update;
+  delete;
+
+    field ( numbering : managed )
+   FileId;
+
+  field ( readonly ) EndUser, FileId;
+  association _XLData { create; with draft; }
+
+  // Logic to read excel data into associated entity ZMAKS_I_XL_DATA
+  action uploadExcelData result [1] $self;
+
+  // Change File Status During Creation of new record
+  determination FillFileStatus on modify { field EndUser; }
+  // Change File Status When file is selected
+  determination FillSelectedStatus on modify { field Attachment; }
+
+  //determine action ChangeFileName { determination FillSelectedStatus ; }
+
+  side effects
+  {
+    field Attachment affects field FileStatus;
+    action uploadExcelData affects $self, messages;
+    //determine action ChangeFileName executed on field Attachment affects $self, messages;
+  }
+
+ //Draft actions
+  draft action Activate optimized;
+  draft action Edit;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTGRC_XLS_USER corresponding extensible
+  {
+    EndUser = end_user;
+    FileId = file_id;
+    FileStatus = file_status;
+    Attachment = attachment;
+    Mimetype = mimetype;
+    Filename = filename;
+    LocalCreatedBy = local_created_by;
+    LocalCreatedAt = local_created_at;
+    LocalLastChangedBy = local_last_changed_by;
+    LocalLastChangedAt = local_last_changed_at;
+    LastChangedAt = last_changed_at;
+  }
+}
+
+define behavior for ZR_TGRC_SCR_CONTRL000 alias XLData
+persistent table ZTGRC_SCR_CONTRL
+extensible
+draft table ZTGRC_SCR_C000_D
+etag master Lastchangedat
+lock dependent by _XLUser
+authorization dependent by _XLUser
+
+{
+association _XLUser { with draft; }
+  field ( mandatory : create )
+   EndUser,
+   LineNum;
+
+  field ( readonly )
+   FileId,
+   LineId,
+   Createdby,
+   Createdat,
+   Lastchangedby,
+   Lastchangedat;
+
+  field ( numbering : managed )
+//   FileId,
+   LineId;
+
+  field ( readonly : update )
+   EndUser,
+   LineNum;
+
+
+//  create;
+  update;
+  delete;
+ action processData result [1] $self;
+//  draft action Activate optimized;
+//  draft action Discard;
+//  draft action Edit;
+//  draft action Resume;
+//  draft determine action Prepare;
+
+  mapping for ZTGRC_SCR_CONTRL corresponding extensible
+  {
+    EndUser = end_user;
+    FileId = file_id;
+    LineId = line_id;
+    linenum = linenum;
+    Application = application;
+    RecordType = record_type;
+    RecordTypeDesc = record_type_desc;
+    Fieldname = fieldname;
+    Control = control;
+    Createdby = createdby;
+    Createdat = createdat;
+    Lastchangedby = lastchangedby;
+    Lastchangedat = lastchangedat;
+  }
+
+}

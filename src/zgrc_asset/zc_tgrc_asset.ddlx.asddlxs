@@ -1,0 +1,1789 @@
+@Metadata.layer: #CORE
+@UI.headerInfo.title.type: #STANDARD
+@UI.headerInfo.title.value: 'AssetExternalId'
+@UI.headerInfo.description.type: #STANDARD
+@UI.headerInfo.description.value: 'AssetName'
+annotate view ZC_TGRC_ASSET with
+{
+  @EndUserText.label: 'AssetExternalId'
+  @UI.facet: [ {
+    label: 'Asset', 
+    id: 'GeneralInfo', 
+    purpose: #STANDARD, 
+    position: 10 , 
+    type: #IDENTIFICATION_REFERENCE
+  },
+  {
+    label: 'Asset Value', 
+    id: 'Items', 
+    purpose: #STANDARD, 
+    position: 11 , 
+    type: #LINEITEM_REFERENCE, 
+    targetElement: '_AssetVal'
+  },
+   {  
+      purpose: #STANDARD,
+      type: #LINEITEM_REFERENCE,
+      label: 'Claim',
+      position: 30,
+      targetElement: '_Claim'  
+      }  ]
+  @UI.identification: [ {
+    position: 10 , 
+    label: 'AssetUuid'
+  },
+   { type: #FOR_ACTION, dataAction: 'copyAsset', label: 'Copy Asset' }  ]
+  @UI.lineItem: [ {
+    position: 10 , 
+    label: 'AssetUuid'
+  } ]
+  @UI.selectionField: [ {
+    position: 10 
+  } ]
+  AssetUuid;
+  
+  @EndUserText.label: 'Asset External Id'
+  @UI.identification: [ {
+    position: 20 , 
+    label:'Asset External Id'
+  } ]
+  @UI.lineItem: [ {
+    position: 20 , 
+    label:'Asset External Id'
+  } ]
+  @UI.selectionField: [ {
+    position: 20 
+  } ]
+  AssetExternalId;
+  
+//  @EndUserText.label: 'List Id'
+//  @UI.identification: [ {
+//    position: 30 ,  label:  'List Id'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 30 ,  label:  'List Id'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 30 
+//  } ]
+//  ListId;
+//  
+//  @EndUserText.label: 'Value Id'
+//  @UI.identification: [ {
+//    position: 40 , label: 'Value Id'
+//  } ]
+//  @UI.lineItem: [ {
+//    position: 40 , label: 'Value Id'
+//  } ]
+//  @UI.selectionField: [ {
+//    position: 40 
+//  } ]
+//  ValueId;
+//  
+  @EndUserText.label: 'Record type'
+  @UI.identification: [ {
+    position: 50 , 
+    label: 'Record type'
+  } ]
+  @UI.lineItem: [ {
+    position: 50 , 
+   label: 'Record type'
+  } ]
+  @UI.selectionField: [ {
+    position: 50 
+  } ]
+  RecordType;
+  
+  @EndUserText.label: 'Asset Name'
+  @UI.identification: [ {
+    position: 60 , 
+    label: 'Asset Name'
+  } ]
+  @UI.lineItem: [ {
+    position: 60 , 
+    label: 'Asset Name'
+  } ]
+  @UI.selectionField: [ {
+    position: 60 
+  } ]
+  AssetName;
+  
+  @EndUserText.label: 'Accounting Code'
+  @UI.identification: [ {
+    position: 70 , 
+    label: 'Accounting Code'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 , 
+    label: 'Accounting Code'
+  } ]
+  @UI.selectionField: [ {
+    position: 70 
+  } ]
+  AccountingCode;
+  
+  @UI.identification: [ {
+    position: 80 
+  } ]
+  @UI.lineItem: [ {
+    position: 80 
+  } ]
+  @UI.selectionField: [ {
+    position: 80 
+  } ]
+  Afe;
+  
+  @UI.identification: [ {
+    position: 90 ,
+    label: 'Agreed Value'
+  } ]
+  @UI.lineItem: [ {
+    position: 90 ,
+    label: 'Agreed Value'
+  } ]
+  @UI.selectionField: [ {
+    position: 90 
+    
+  } ]
+  AgreedValueLookup;
+  
+  @EndUserText.label: 'Area Sq Km'
+  @UI.identification: [ {
+    position: 100 , 
+    label: 'Area Sq Km'
+  } ]
+  @UI.lineItem: [ {
+    position: 100 , 
+    label: 'Area Sq Km'
+  } ]
+  @UI.selectionField: [ {
+    position: 100 
+  } ]
+  AreaSqKm;
+  
+  @UI.identification: [ {
+    position: 110 ,
+     label: 'Asset Category'
+  } ]
+  @UI.lineItem: [ {
+    position: 110 ,
+     label: 'Asset Category'
+  } ]
+  @UI.selectionField: [ {
+    position: 110 
+     
+  } ]
+  AssetCategory;
+  
+  @EndUserText.label: 'Asset Description'
+  @UI.identification: [ {
+    position: 120 , 
+    label: 'Asset Description'
+  } ]
+  @UI.lineItem: [ {
+    position: 120 , 
+    label: 'Asset Description'
+  } ]
+  @UI.selectionField: [ {
+    position: 120 
+  } ]
+  AssetDescription;
+  
+  @EndUserText.label: 'Asset Make Or Model'
+  @UI.identification: [ {
+    position: 130 , 
+    label: 'Asset MakeOrModel'
+  } ]
+  @UI.lineItem: [ {
+    position: 130 , 
+    label: 'AssetMakeOrModel'
+  } ]
+  @UI.selectionField: [ {
+    position: 130 
+  } ]
+  AssetMakeOrModel;
+  
+  @EndUserText.label: 'Asset Policy History'
+  @UI.identification: [ {
+    position: 140 ,
+     label: 'Asset Policy History'
+
+  } ]
+  @UI.lineItem: [ {
+    position: 140 ,
+     label: 'Asset Policy History'
+  } ]
+  @UI.selectionField: [ {
+    position: 140 
+  } ]
+  AssetPolicyHistory;
+  
+  @EndUserText.label: 'Asset Status'
+  @UI.identification: [ {
+    position: 150 ,
+     label: 'Asset Status'
+  } ]
+  @UI.lineItem: [ {
+    position: 150 
+  } ]
+  @UI.selectionField: [ {
+    position: 150 
+  } ]
+  AssetStatus;
+  
+  @EndUserText.label: 'Asset Type'
+  @UI.identification: [ {
+    position: 160 ,
+    label: 'Asset Type'
+  } ]
+  @UI.lineItem: [ {
+    position: 160 ,
+    label: 'Asset Type'
+  } ]
+  @UI.selectionField: [ {
+    position: 160 
+  } ]
+  AssetTypeP;
+  
+  @EndUserText.label: 'Type'
+  @UI.identification: [ {
+    position: 170 ,
+    label: 'Type'
+  } ]
+  @UI.lineItem: [ {
+    position: 170 ,
+    label: 'Type'
+  } ]
+  @UI.selectionField: [ {
+    position: 170 
+  } ]
+  Type;
+  
+  @EndUserText.label : 'Declared Value'
+  @UI.identification: [ {
+    position: 180 
+  } ]
+  @UI.lineItem: [ {
+    position: 180 
+  } ]
+  @UI.selectionField: [ {
+    position: 180 
+  } ]
+  DeclaredValue;
+  
+  @EndUserText.label: 'AssetValueStatus'
+  @UI.identification: [ {
+    position: 190 , 
+    label: 'AssetValueStatus'
+  } ]
+  @UI.lineItem: [ {
+    position: 190 , 
+    label: 'AssetValueStatus'
+  } ]
+  @UI.selectionField: [ {
+    position: 190 
+  } ]
+  AssetValueStatus;
+  
+  @EndUserText.label: 'AuxiliaryEngineHorsepower'
+  @UI.identification: [ {
+    position: 200 , 
+    label: 'AuxiliaryEngineHorsepower'
+  } ]
+  @UI.lineItem: [ {
+    position: 200 , 
+    label: 'AuxiliaryEngineHorsepower'
+  } ]
+  @UI.selectionField: [ {
+    position: 200 
+  } ]
+  AuxiliaryEngineHorsepower;
+  
+  @EndUserText.label: 'AuxiliaryEngineKilowatts'
+  @UI.identification: [ {
+    position: 210 , 
+    label: 'AuxiliaryEngineKilowatts'
+  } ]
+  @UI.lineItem: [ {
+    position: 210 , 
+    label: 'AuxiliaryEngineKilowatts'
+  } ]
+  @UI.selectionField: [ {
+    position: 210 
+  } ]
+  AuxiliaryEngineKilowatts;
+  
+  @UI.identification: [ {
+    position: 220 
+  } ]
+  @UI.lineItem: [ {
+    position: 220 
+  } ]
+  @UI.selectionField: [ {
+    position: 220 
+  } ]
+  AuxiliaryEngineMake;
+  
+  @EndUserText.label: 'AuxiliaryEngineRpm'
+  @UI.identification: [ {
+    position: 230 , 
+    label: 'AuxiliaryEngineRpm'
+  } ]
+  @UI.lineItem: [ {
+    position: 230 , 
+    label: 'AuxiliaryEngineRpm'
+  } ]
+  @UI.selectionField: [ {
+    position: 230 
+  } ]
+  AuxiliaryEngineRpm;
+  
+  @UI.identification: [ {
+    position: 240 
+  } ]
+  @UI.lineItem: [ {
+    position: 240 
+  } ]
+  @UI.selectionField: [ {
+    position: 240 
+  } ]
+  AuxiliaryEngineType;
+  
+  @UI.identification: [ {
+    position: 250 
+  } ]
+  @UI.lineItem: [ {
+    position: 250 
+  } ]
+  @UI.selectionField: [ {
+    position: 250 
+  } ]
+  NumberAuxiliaryEngines;
+  
+  @EndUserText.label: 'Block'
+  @UI.identification: [ {
+    position: 260 , 
+    label: 'Block'
+  } ]
+  @UI.lineItem: [ {
+    position: 260 , 
+    label: 'Block'
+  } ]
+  @UI.selectionField: [ {
+    position: 260 
+  } ]
+  Block;
+  
+  @EndUserText.label: 'BlowoutPreventerRating'
+  @UI.identification: [ {
+    position: 270 , 
+    label: 'BlowoutPreventerRating'
+  } ]
+  @UI.lineItem: [ {
+    position: 270 , 
+    label: 'BlowoutPreventerRating'
+  } ]
+  @UI.selectionField: [ {
+    position: 270 
+  } ]
+  BlowoutPreventerRating;
+  
+  @EndUserText.label: 'BottomHoleTemperature'
+  @UI.identification: [ {
+    position: 280 , 
+    label: 'BottomHoleTemperature'
+  } ]
+  @UI.lineItem: [ {
+    position: 280 , 
+    label: 'BottomHoleTemperature'
+  } ]
+  @UI.selectionField: [ {
+    position: 280 
+  } ]
+  BottomHoleTemperature;
+  
+  @EndUserText.label: 'Breadth'
+  @UI.identification: [ {
+    position: 290 , 
+    label: 'Breadth'
+  } ]
+  @UI.lineItem: [ {
+    position: 290 , 
+    label: 'Breadth'
+  } ]
+  @UI.selectionField: [ {
+    position: 290 
+  } ]
+  Breadth;
+  
+  @EndUserText.label: 'BreadthExtremeMeters'
+  @UI.identification: [ {
+    position: 300 , 
+    label: 'BreadthExtremeMeters'
+  } ]
+  @UI.lineItem: [ {
+    position: 300 , 
+    label: 'BreadthExtremeMeters'
+  } ]
+  @UI.selectionField: [ {
+    position: 300 
+  } ]
+  BreadthExtremeMeters;
+  
+  @EndUserText.label: 'BuildingYardCode'
+  @UI.identification: [ {
+    position: 310 , 
+    label: 'BuildingYardCode'
+  } ]
+  @UI.lineItem: [ {
+    position: 310 , 
+    label: 'BuildingYardCode'
+  } ]
+  @UI.selectionField: [ {
+    position: 310 
+  } ]
+  BuildingYardCode;
+  
+  @EndUserText.label: 'BuildingYardNumber'
+  @UI.identification: [ {
+    position: 320 , 
+    label: 'BuildingYardNumber'
+  } ]
+  @UI.lineItem: [ {
+    position: 320 , 
+    label: 'BuildingYardNumber'
+  } ]
+  @UI.selectionField: [ {
+    position: 320 
+  } ]
+  BuildingYardNumber;
+  
+  @EndUserText.label: 'CallSign'
+  @UI.identification: [ {
+    position: 330 , 
+    label: 'CallSign'
+  } ]
+  @UI.lineItem: [ {
+    position: 330 , 
+    label: 'CallSign'
+  } ]
+  @UI.selectionField: [ {
+    position: 330 
+  } ]
+  CallSign;
+  
+  @EndUserText.label: 'CancellationDate'
+  @UI.identification: [ {
+    position: 340 , 
+    label: 'CancellationDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 340 , 
+    label: 'CancellationDate'
+  } ]
+  @UI.selectionField: [ {
+    position: 340 
+  } ]
+  CancellationDate;
+  
+  @UI.identification: [ {
+    position: 350 
+  } ]
+  @UI.lineItem: [ {
+    position: 350 
+  } ]
+  @UI.selectionField: [ {
+    position: 350 
+  } ]
+  CargoValue;
+  
+  @UI.identification: [ {
+    position: 360 
+  } ]
+  @UI.lineItem: [ {
+    position: 360 
+  } ]
+  @UI.selectionField: [ {
+    position: 360 
+  } ]
+  CauseOfCancellation;
+  
+  @UI.identification: [ {
+    position: 370 
+  } ]
+  @UI.lineItem: [ {
+    position: 370 
+  } ]
+  @UI.selectionField: [ {
+    position: 370 
+  } ]
+  ClassEngine;
+  
+  @EndUserText.label: 'ClassGen'
+  @UI.identification: [ {
+    position: 380 , 
+    label: 'ClassGen'
+  } ]
+  @UI.lineItem: [ {
+    position: 380 , 
+    label: 'ClassGen'
+  } ]
+  @UI.selectionField: [ {
+    position: 380 
+  } ]
+  ClassGen;
+  
+  @UI.identification: [ {
+    position: 390 
+  } ]
+  @UI.lineItem: [ {
+    position: 390 
+  } ]
+  @UI.selectionField: [ {
+    position: 390 
+  } ]
+  ClassIce;
+  
+  @UI.identification: [ {
+    position: 400 
+  } ]
+  @UI.lineItem: [ {
+    position: 400 
+  } ]
+  @UI.selectionField: [ {
+    position: 400 
+  } ]
+  ClassificationSociety;
+  
+  @UI.identification: [ {
+    position: 410 
+  } ]
+  @UI.lineItem: [ {
+    position: 410 
+  } ]
+  @UI.selectionField: [ {
+    position: 410 
+  } ]
+  ClassificationSocietyCode;
+  
+  @UI.identification: [ {
+    position: 420 
+  } ]
+  @UI.lineItem: [ {
+    position: 420 
+  } ]
+  @UI.selectionField: [ {
+    position: 420 
+  } ]
+  ContentEquipment;
+  
+  @UI.identification: [ {
+    position: 430 
+  } ]
+  @UI.lineItem: [ {
+    position: 430 
+  } ]
+  @UI.selectionField: [ {
+    position: 430 
+  } ]
+  Continent;
+  
+  @UI.identification: [ {
+    position: 440 
+  } ]
+  @UI.lineItem: [ {
+    position: 440 
+  } ]
+  @UI.selectionField: [ {
+    position: 440 
+  } ]
+  Currency;
+  
+  @UI.identification: [ {
+    position: 450 
+  } ]
+  @UI.lineItem: [ {
+    position: 450 
+  } ]
+  @UI.selectionField: [ {
+    position: 450 
+  } ]
+  CurrentAssetValue;
+  
+  @EndUserText.label: 'CurrCovrUnderConstructIns'
+  @UI.identification: [ {
+    position: 460 , 
+    label: 'CurrCovrUnderConstructIns'
+  } ]
+  @UI.lineItem: [ {
+    position: 460 , 
+    label: 'CurrCovrUnderConstructIns'
+  } ]
+  @UI.selectionField: [ {
+    position: 460 
+  } ]
+  CurrCovrUnderConstructIns;
+  
+  @EndUserText.label: 'DateAddedAcquired'
+  @UI.identification: [ {
+    position: 470 , 
+    label: 'DateAddedAcquired'
+  } ]
+  @UI.lineItem: [ {
+    position: 470 , 
+    label: 'DateAddedAcquired'
+  } ]
+  @UI.selectionField: [ {
+    position: 470 
+  } ]
+  DateAddedAcquired;
+  
+  @EndUserText.label: 'DtAssetAttchDtchToPolicy'
+  @UI.identification: [ {
+    position: 480 , 
+    label: 'DtAssetAttchDtchToPolicy'
+  } ]
+  @UI.lineItem: [ {
+    position: 480 , 
+    label: 'DtAssetAttchDtchToPolicy'
+  } ]
+  @UI.selectionField: [ {
+    position: 480 
+  } ]
+  DtAssetAttchDtchToPolicy;
+  
+  @EndUserText.label: 'DateOfRemovalDisposal'
+  @UI.identification: [ {
+    position: 490 , 
+    label: 'DateOfRemovalDisposal'
+  } ]
+  @UI.lineItem: [ {
+    position: 490 , 
+    label: 'DateOfRemovalDisposal'
+  } ]
+  @UI.selectionField: [ {
+    position: 490 
+  } ]
+  DateOfRemovalDisposal;
+  
+  @EndUserText.label: 'DateOwnershipEffective'
+  @UI.identification: [ {
+    position: 500 , 
+    label: 'DateOwnershipEffective'
+  } ]
+  @UI.lineItem: [ {
+    position: 500 , 
+    label: 'DateOwnershipEffective'
+  } ]
+  @UI.selectionField: [ {
+    position: 500 
+  } ]
+  DateOwnershipEffective;
+  
+  @EndUserText.label: 'DeadweightTonnage'
+  @UI.identification: [ {
+    position: 510 , 
+    label: 'DeadweightTonnage'
+  } ]
+  @UI.lineItem: [ {
+    position: 510 , 
+    label: 'DeadweightTonnage'
+  } ]
+  @UI.selectionField: [ {
+    position: 510 
+  } ]
+  DeadweightTonnage;
+  
+  @EndUserText.label: 'Depth'
+  @UI.identification: [ {
+    position: 520 , 
+    label: 'Depth'
+  } ]
+  @UI.lineItem: [ {
+    position: 520 , 
+    label: 'Depth'
+  } ]
+  @UI.selectionField: [ {
+    position: 520 
+  } ]
+  Depth;
+  
+  @UI.identification: [ {
+    position: 530 
+  } ]
+  @UI.lineItem: [ {
+    position: 530 
+  } ]
+  @UI.selectionField: [ {
+    position: 530 
+  } ]
+  Description;
+  
+  @EndUserText.label: 'DisplacementMeters'
+  @UI.identification: [ {
+    position: 540 , 
+    label: 'DisplacementMeters'
+  } ]
+  @UI.lineItem: [ {
+    position: 540 , 
+    label: 'DisplacementMeters'
+  } ]
+  @UI.selectionField: [ {
+    position: 540 
+  } ]
+  DisplacementMeters;
+  
+  @UI.identification: [ {
+    position: 550 
+  } ]
+  @UI.lineItem: [ {
+    position: 550 
+  } ]
+  @UI.selectionField: [ {
+    position: 550 
+  } ]
+  DoubleHull;
+  
+  @EndUserText.label: 'DraughtMeters'
+  @UI.identification: [ {
+    position: 560 , 
+    label: 'DraughtMeters'
+  } ]
+  @UI.lineItem: [ {
+    position: 560 , 
+    label: 'DraughtMeters'
+  } ]
+  @UI.selectionField: [ {
+    position: 560 
+  } ]
+  DraughtMeters;
+  
+  @EndUserText.label: 'DrillingContrator'
+  @UI.identification: [ {
+    position: 570 , 
+    label: 'DrillingContrator'
+  } ]
+  @UI.lineItem: [ {
+    position: 570 , 
+    label: 'DrillingContrator'
+  } ]
+  @UI.selectionField: [ {
+    position: 570 
+  } ]
+  DrillingContrator;
+  
+  @EndUserText.label: 'ExpectedRedeliveryDate'
+  @UI.identification: [ {
+    position: 580 , 
+    label: 'ExpectedRedeliveryDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 580 , 
+    label: 'ExpectedRedeliveryDate'
+  } ]
+  @UI.selectionField: [ {
+    position: 580 
+  } ]
+  ExpectedRedeliveryDate;
+  
+  @EndUserText.label: 'Fi'
+  @UI.identification: [ {
+    position: 590 , 
+    label: 'Fi'
+  } ]
+  @UI.lineItem: [ {
+    position: 590 , 
+    label: 'Fi'
+  } ]
+  @UI.selectionField: [ {
+    position: 590 
+  } ]
+  Fi;
+  
+  @EndUserText.label: 'FieldCode'
+  @UI.identification: [ {
+    position: 600 , 
+    label: 'FieldCode'
+  } ]
+  @UI.lineItem: [ {
+    position: 600 , 
+    label: 'FieldCode'
+  } ]
+  @UI.selectionField: [ {
+    position: 600 
+  } ]
+  FieldCode;
+  
+  @UI.identification: [ {
+    position: 610 
+  } ]
+  @UI.lineItem: [ {
+    position: 610 
+  } ]
+  @UI.selectionField: [ {
+    position: 610 
+  } ]
+  Flag;
+  
+  @UI.identification: [ {
+    position: 620 
+  } ]
+  @UI.lineItem: [ {
+    position: 620 
+  } ]
+  @UI.selectionField: [ {
+    position: 620 
+  } ]
+  FlagSrc;
+  
+  @EndUserText.label: 'FleetNumber'
+  @UI.identification: [ {
+    position: 630 , 
+    label: 'FleetNumber'
+  } ]
+  @UI.lineItem: [ {
+    position: 630 , 
+    label: 'FleetNumber'
+  } ]
+  @UI.selectionField: [ {
+    position: 630 
+  } ]
+  FleetNumber;
+  
+  @EndUserText.label: 'FormulaDeadweight'
+  @UI.identification: [ {
+    position: 640 , 
+    label: 'FormulaDeadweight'
+  } ]
+  @UI.lineItem: [ {
+    position: 640 , 
+    label: 'FormulaDeadweight'
+  } ]
+  @UI.selectionField: [ {
+    position: 640 
+  } ]
+  FormulaDeadweight;
+  
+  @EndUserText.label: 'GrossRegisterTonnage'
+  @UI.identification: [ {
+    position: 650 , 
+    label: 'GrossRegisterTonnage'
+  } ]
+  @UI.lineItem: [ {
+    position: 650 , 
+    label: 'GrossRegisterTonnage'
+  } ]
+  @UI.selectionField: [ {
+    position: 650 
+  } ]
+  GrossRegisterTonnage;
+  
+  @EndUserText.label: 'GrossTonnage'
+  @UI.identification: [ {
+    position: 660 , 
+    label: 'GrossTonnage'
+  } ]
+  @UI.lineItem: [ {
+    position: 660 , 
+    label: 'GrossTonnage'
+  } ]
+  @UI.selectionField: [ {
+    position: 660 
+  } ]
+  GrossTonnage;
+  
+  @EndUserText.label: 'HeadOwners'
+  @UI.identification: [ {
+    position: 670 , 
+    label: 'HeadOwners'
+  } ]
+  @UI.lineItem: [ {
+    position: 670 , 
+    label: 'HeadOwners'
+  } ]
+  @UI.selectionField: [ {
+    position: 670 
+  } ]
+  HeadOwners;
+  
+  @EndUserText.label: 'HfmCode'
+  @UI.identification: [ {
+    position: 680 , 
+    label: 'HfmCode'
+  } ]
+  @UI.lineItem: [ {
+    position: 680 , 
+    label: 'HfmCode'
+  } ]
+  @UI.selectionField: [ {
+    position: 680 
+  } ]
+  HfmCode;
+  
+  @UI.identification: [ {
+    position: 690 , label: 'HierarchyManaged'
+  } ]
+  @UI.lineItem: [ {
+    position: 690 
+  } ]
+  @UI.selectionField: [ {
+    position: 690 
+  } ]
+  HierarchyManaged;
+  
+  @EndUserText.label: 'ImoNumber'
+  @UI.identification: [ {
+    position: 700 , 
+    label: 'ImoNumber'
+  } ]
+  @UI.lineItem: [ {
+    position: 700 , 
+    label: 'ImoNumber'
+  } ]
+  @UI.selectionField: [ {
+    position: 700 
+  } ]
+  ImoNumber;
+  
+  @UI.identification: [ {
+    position: 710,
+    type: #WITH_INTENT_BASED_NAVIGATION,
+      semanticObject: 'zgrc_location',
+      semanticObjectAction: 'get',
+//      value: 'HierarchyNode',
+    label: 'Hierarchy' 
+  } ]
+  @UI.lineItem: [ {
+    position: 710 
+  } ]
+  @UI.selectionField: [ {
+    position: 710 
+  } ]
+  HierarchyNode;
+  
+  @EndUserText.label: 'July2023update'
+  @UI.identification: [ {
+    position: 720 , 
+    label: 'July2023update'
+  } ]
+  @UI.lineItem: [ {
+    position: 720 , 
+    label: 'July2023update'
+  } ]
+  @UI.selectionField: [ {
+    position: 720 
+  } ]
+  July2023update;
+  
+  @EndUserText.label: 'LastHandledDate'
+  @UI.identification: [ {
+    position: 730 , 
+    label: 'LastHandledDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 730 , 
+    label: 'LastHandledDate'
+  } ]
+  @UI.selectionField: [ {
+    position: 730 
+  } ]
+  LastHandledDate;
+  
+  @EndUserText.label: 'LayUpDate'
+  @UI.identification: [ {
+    position: 740 , 
+    label: 'LayUpDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 740 , 
+    label: 'LayUpDate'
+  } ]
+  @UI.selectionField: [ {
+    position: 740 
+  } ]
+  LayUpDate;
+  
+  @EndUserText.label: 'LayUpPosition'
+  @UI.identification: [ {
+    position: 750 , 
+    label: 'LayUpPosition'
+  } ]
+  @UI.lineItem: [ {
+    position: 750 , 
+    label: 'LayUpPosition'
+  } ]
+  @UI.selectionField: [ {
+    position: 750 
+  } ]
+  LayUpPosition;
+  
+  @UI.identification: [ {
+    position: 760 
+  } ]
+  @UI.lineItem: [ {
+    position: 760 
+  } ]
+  @UI.selectionField: [ {
+    position: 760 
+  } ]
+  LayUpType;
+  
+  @EndUserText.label: 'LengthOverallMeters'
+  @UI.identification: [ {
+    position: 770 , 
+    label: 'LengthOverallMeters'
+  } ]
+  @UI.lineItem: [ {
+    position: 770 , 
+    label: 'LengthOverallMeters'
+  } ]
+  @UI.selectionField: [ {
+    position: 770 
+  } ]
+  LengthOverallMeters;
+  
+  @UI.identification: [ {
+    position: 780 
+  } ]
+  @UI.lineItem: [ {
+    position: 780 
+  } ]
+  @UI.selectionField: [ {
+    position: 780 
+  } ]
+  Location;
+  
+  @UI.identification: [ {
+    position: 790 
+  } ]
+  @UI.lineItem: [ {
+    position: 790 
+  } ]
+  @UI.selectionField: [ {
+    position: 790 
+  } ]
+  MaerskOilInterest;
+  
+  @EndUserText.label: 'MainEngineHorsepower'
+  @UI.identification: [ {
+    position: 800 , 
+    label: 'MainEngineHorsepower'
+  } ]
+  @UI.lineItem: [ {
+    position: 800 , 
+    label: 'MainEngineHorsepower'
+  } ]
+  @UI.selectionField: [ {
+    position: 800 
+  } ]
+  MainEngineHorsepower;
+  
+  @EndUserText.label: 'MainEngineKilowatts'
+  @UI.identification: [ {
+    position: 810 , 
+    label: 'MainEngineKilowatts'
+  } ]
+  @UI.lineItem: [ {
+    position: 810 , 
+    label: 'MainEngineKilowatts'
+  } ]
+  @UI.selectionField: [ {
+    position: 810 
+  } ]
+  MainEngineKilowatts;
+  
+  @UI.identification: [ {
+    position: 820 
+  } ]
+  @UI.lineItem: [ {
+    position: 820 
+  } ]
+  @UI.selectionField: [ {
+    position: 820 
+  } ]
+  MainEngineMake;
+  
+  @EndUserText.label: 'MainEngineRpm'
+  @UI.identification: [ {
+    position: 830 , 
+    label: 'MainEngineRpm'
+  } ]
+  @UI.lineItem: [ {
+    position: 830 , 
+    label: 'MainEngineRpm'
+  } ]
+  @UI.selectionField: [ {
+    position: 830 
+  } ]
+  MainEngineRpm;
+  
+  @UI.identification: [ {
+    position: 840 
+  } ]
+  @UI.lineItem: [ {
+    position: 840 
+  } ]
+  @UI.selectionField: [ {
+    position: 840 
+  } ]
+  MainEngineType;
+  
+  @UI.identification: [ {
+    position: 850 
+  } ]
+  @UI.lineItem: [ {
+    position: 850 
+  } ]
+  @UI.selectionField: [ {
+    position: 850 
+  } ]
+  NumberMainEngines;
+  
+  @EndUserText.label: 'ManagingOwners'
+  @UI.identification: [ {
+    position: 860 , 
+    label: 'ManagingOwners'
+  } ]
+  @UI.lineItem: [ {
+    position: 860 , 
+    label: 'ManagingOwners'
+  } ]
+  @UI.selectionField: [ {
+    position: 860 
+  } ]
+  ManagingOwners;
+  
+  @UI.identification: [ {
+    position: 870 
+  } ]
+  @UI.lineItem: [ {
+    position: 870 
+  } ]
+  @UI.selectionField: [ {
+    position: 870 
+  } ]
+  Material;
+  
+  @UI.identification: [ {
+    position: 880 
+  } ]
+  @UI.lineItem: [ {
+    position: 880 
+  } ]
+  @UI.selectionField: [ {
+    position: 880 
+  } ]
+  Maxvaluationdate;
+  
+  @EndUserText.label: 'Md'
+  @UI.identification: [ {
+    position: 890 , 
+    label: 'Md'
+  } ]
+  @UI.lineItem: [ {
+    position: 890 , 
+    label: 'Md'
+  } ]
+  @UI.selectionField: [ {
+    position: 890 
+  } ]
+  Md;
+  
+  @EndUserText.label: 'DepthBelowSeabedFeet'
+  @UI.identification: [ {
+    position: 900 , 
+    label: 'DepthBelowSeabedFeet'
+  } ]
+  @UI.lineItem: [ {
+    position: 900 , 
+    label: 'DepthBelowSeabedFeet'
+  } ]
+  @UI.selectionField: [ {
+    position: 900 
+  } ]
+  DepthBelowSeabedFeet;
+  
+  @EndUserText.label: 'MmsiNumber'
+  @UI.identification: [ {
+    position: 910 , 
+    label: 'MmsiNumber'
+  } ]
+  @UI.lineItem: [ {
+    position: 910 , 
+    label: 'MmsiNumber'
+  } ]
+  @UI.selectionField: [ {
+    position: 910 
+  } ]
+  MmsiNumber;
+  
+  @UI.identification: [ {
+    position: 920 
+  } ]
+  @UI.lineItem: [ {
+    position: 920 
+  } ]
+  @UI.selectionField: [ {
+    position: 920 
+  } ]
+  Notes;
+  
+  @EndUserText.label: 'NumberOfPassengers'
+  @UI.identification: [ {
+    position: 930 , 
+    label: 'NumberOfPassengers'
+  } ]
+  @UI.lineItem: [ {
+    position: 930 , 
+    label: 'NumberOfPassengers'
+  } ]
+  @UI.selectionField: [ {
+    position: 930 
+  } ]
+  NumberOfPassengers;
+  
+  @UI.identification: [ {
+    position: 940 
+  } ]
+  @UI.lineItem: [ {
+    position: 940 
+  } ]
+  @UI.selectionField: [ {
+    position: 940 
+  } ]
+  ObjectStatus;
+  
+  @EndUserText.label: 'Operator'
+  @UI.identification: [ {
+    position: 950 , 
+    label: 'Operator'
+  } ]
+  @UI.lineItem: [ {
+    position: 950 , 
+    label: 'Operator'
+  } ]
+  @UI.selectionField: [ {
+    position: 950 
+  } ]
+  Operator;
+  
+  @UI.identification: [ {
+    position: 960 
+  } ]
+  @UI.lineItem: [ {
+    position: 960 
+  } ]
+  @UI.selectionField: [ {
+    position: 960 
+  } ]
+  Ownership;
+  
+  @UI.identification: [ {
+    position: 970 
+  } ]
+  @UI.lineItem: [ {
+    position: 970 
+  } ]
+  @UI.selectionField: [ {
+    position: 970 
+  } ]
+  OwnershipStatus;
+  
+  @UI.identification: [ {
+    position: 980 
+  } ]
+  @UI.lineItem: [ {
+    position: 980 
+  } ]
+  @UI.selectionField: [ {
+    position: 980 
+  } ]
+  PIClubNew;
+  
+  @UI.identification: [ {
+    position: 990 
+  } ]
+  @UI.lineItem: [ {
+    position: 990 
+  } ]
+  @UI.selectionField: [ {
+    position: 990 
+  } ]
+  ParcelTanker;
+  
+  @UI.identification: [ {
+    position: 1000 
+  } ]
+  @UI.lineItem: [ {
+    position: 1000 
+  } ]
+  @UI.selectionField: [ {
+    position: 1000 
+  } ]
+  PartOfJointVentureYN;
+  
+  @EndUserText.label: 'Partners'
+  @UI.identification: [ {
+    position: 1010 , 
+    label: 'Partners'
+  } ]
+  @UI.lineItem: [ {
+    position: 1010 , 
+    label: 'Partners'
+  } ]
+  @UI.selectionField: [ {
+    position: 1010 
+  } ]
+  Partners;
+  
+  @UI.identification: [ {
+    position: 1020 
+  } ]
+  @UI.lineItem: [ {
+    position: 1020 
+  } ]
+  @UI.selectionField: [ {
+    position: 1020 
+  } ]
+  Picture;
+  
+  @EndUserText.label: 'Port'
+  @UI.identification: [ {
+    position: 1030 , 
+    label: 'Port'
+  } ]
+  @UI.lineItem: [ {
+    position: 1030 , 
+    label: 'Port'
+  } ]
+  @UI.selectionField: [ {
+    position: 1030 
+  } ]
+  Port;
+  
+  @EndUserText.label: 'PortOfRegistry'
+  @UI.identification: [ {
+    position: 1040 , 
+    label: 'PortOfRegistry'
+  } ]
+  @UI.lineItem: [ {
+    position: 1040 , 
+    label: 'PortOfRegistry'
+  } ]
+  @UI.selectionField: [ {
+    position: 1040 
+  } ]
+  PortOfRegistry;
+  
+  @EndUserText.label: 'ProductionStart'
+  @UI.identification: [ {
+    position: 1050 , 
+    label: 'ProductionStart'
+  } ]
+  @UI.lineItem: [ {
+    position: 1050 , 
+    label: 'ProductionStart'
+  } ]
+  @UI.selectionField: [ {
+    position: 1050 
+  } ]
+  ProductionStart;
+  
+  @EndUserText.label: 'ProgramEntry'
+  @UI.identification: [ {
+    position: 1060 , 
+    label: 'ProgramEntry'
+  } ]
+  @UI.lineItem: [ {
+    position: 1060 , 
+    label: 'ProgramEntry'
+  } ]
+  @UI.selectionField: [ {
+    position: 1060 
+  } ]
+  ProgramEntry;
+  
+  @EndUserText.label: 'ProgramExit'
+  @UI.identification: [ {
+    position: 1070 , 
+    label: 'ProgramExit'
+  } ]
+  @UI.lineItem: [ {
+    position: 1070 , 
+    label: 'ProgramExit'
+  } ]
+  @UI.selectionField: [ {
+    position: 1070 
+  } ]
+  ProgramExit;
+  
+  @UI.identification: [ {
+    position: 1080 
+  } ]
+  @UI.lineItem: [ {
+    position: 1080 
+  } ]
+  @UI.selectionField: [ {
+    position: 1080 
+  } ]
+  ProgramLine;
+  
+  @UI.identification: [ {
+    position: 1090 
+  } ]
+  @UI.lineItem: [ {
+    position: 1090 
+  } ]
+  @UI.selectionField: [ {
+    position: 1090 
+  } ]
+  Propulsion;
+  
+  @UI.identification: [ {
+    position: 1100 
+  } ]
+  @UI.lineItem: [ {
+    position: 1100 
+  } ]
+  @UI.selectionField: [ {
+    position: 1100 
+  } ]
+  Property;
+  
+  @EndUserText.label: 'PurchaseDate'
+  @UI.identification: [ {
+    position: 1110 , 
+    label: 'PurchaseDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 1110 , 
+    label: 'PurchaseDate'
+  } ]
+  @UI.selectionField: [ {
+    position: 1110 
+  } ]
+  PurchaseDate;
+  
+  @EndUserText.label: 'RegistrationDate'
+  @UI.identification: [ {
+    position: 1120 , 
+    label: 'RegistrationDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 1120 , 
+    label: 'RegistrationDate'
+  } ]
+  @UI.selectionField: [ {
+    position: 1120 
+  } ]
+  RegistrationDate;
+  
+  @UI.identification: [ {
+    position: 1130 
+  } ]
+  @UI.lineItem: [ {
+    position: 1130 
+  } ]
+  @UI.selectionField: [ {
+    position: 1130 
+  } ]
+  RegistryType;
+  
+  @UI.identification: [ {
+    position: 1140 
+  } ]
+  @UI.lineItem: [ {
+    position: 1140 
+  } ]
+  @UI.selectionField: [ {
+    position: 1140 
+  } ]
+  Revenue;
+  
+  @EndUserText.label: 'RkAssetValueStatusDate'
+  @UI.identification: [ {
+    position: 1150 , 
+    label: 'RkAssetValueStatusDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 1150 , 
+    label: 'RkAssetValueStatusDate'
+  } ]
+  @UI.selectionField: [ {
+    position: 1150 
+  } ]
+  RkAssetValueStatusDate;
+  
+  @UI.identification: [ {
+    position: 1160 
+  } ]
+  @UI.lineItem: [ {
+    position: 1160 
+  } ]
+  @UI.selectionField: [ {
+    position: 1160 
+  } ]
+  SegregatedBallastTank;
+  
+  @EndUserText.label: 'SerialNo'
+  @UI.identification: [ {
+    position: 1170 , 
+    label: 'SerialNo'
+  } ]
+  @UI.lineItem: [ {
+    position: 1170 , 
+    label: 'SerialNo'
+  } ]
+  @UI.selectionField: [ {
+    position: 1170 
+  } ]
+  SerialNo;
+  
+  @EndUserText.label: 'SpudDate'
+  @UI.identification: [ {
+    position: 1180 , 
+    label: 'SpudDate'
+  } ]
+  @UI.lineItem: [ {
+    position: 1180 , 
+    label: 'SpudDate'
+  } ]
+  @UI.selectionField: [ {
+    position: 1180 
+  } ]
+  SpudDate;
+  
+  @UI.identification: [ {
+    position: 1190 
+  } ]
+  @UI.lineItem: [ {
+    position: 1190 
+  } ]
+  @UI.selectionField: [ {
+    position: 1190 
+  } ]
+  Subtype;
+  
+  @EndUserText.label: 'TerminalName'
+  @UI.identification: [ {
+    position: 1200 , 
+    label: 'TerminalName'
+  } ]
+  @UI.lineItem: [ {
+    position: 1200 , 
+    label: 'TerminalName'
+  } ]
+  @UI.selectionField: [ {
+    position: 1200 
+  } ]
+  TerminalName;
+  
+  @EndUserText.label: 'TotalLengthKm'
+  @UI.identification: [ {
+    position: 1210 , 
+    label: 'TotalLengthKm'
+  } ]
+  @UI.lineItem: [ {
+    position: 1210 , 
+    label: 'TotalLengthKm'
+  } ]
+  @UI.selectionField: [ {
+    position: 1210 
+  } ]
+  TotalLengthKm;
+  
+  @EndUserText.label: 'Tvd'
+  @UI.identification: [ {
+    position: 1220 , 
+    label: 'Tvd'
+  } ]
+  @UI.lineItem: [ {
+    position: 1220 , 
+    label: 'Tvd'
+  } ]
+  @UI.selectionField: [ {
+    position: 1220 
+  } ]
+  Tvd;
+  
+  @EndUserText.label: 'UniqueId1'
+  @UI.identification: [ {
+    position: 1230 , 
+    label: 'UniqueId1'
+  } ]
+  @UI.lineItem: [ {
+    position: 1230 , 
+    label: 'UniqueId1'
+  } ]
+  @UI.selectionField: [ {
+    position: 1230 
+  } ]
+  UniqueId1;
+  
+  @EndUserText.label: 'UniqueId2'
+  @UI.identification: [ {
+    position: 1240 , 
+    label: 'UniqueId2'
+  } ]
+  @UI.lineItem: [ {
+    position: 1240 , 
+    label: 'UniqueId2'
+  } ]
+  @UI.selectionField: [ {
+    position: 1240 
+  } ]
+  UniqueId2;
+  
+  @EndUserText.label: 'Utilisation'
+  @UI.identification: [ {
+    position: 1250 , 
+    label: 'Utilisation'
+  } ]
+  @UI.lineItem: [ {
+    position: 1250 , 
+    label: 'Utilisation'
+  } ]
+  @UI.selectionField: [ {
+    position: 1250 
+  } ]
+  Utilisation;
+  
+  @EndUserText.label: 'VesselCode'
+  @UI.identification: [ {
+    position: 1260 , 
+    label: 'VesselCode'
+  } ]
+  @UI.lineItem: [ {
+    position: 1260 , 
+    label: 'VesselCode'
+  } ]
+  @UI.selectionField: [ {
+    position: 1260 
+  } ]
+  VesselCode;
+  
+  @EndUserText.label: 'VesselExName'
+  @UI.identification: [ {
+    position: 1270 , 
+    label: 'VesselExName'
+  } ]
+  @UI.lineItem: [ {
+    position: 1270 , 
+    label: 'VesselExName'
+  } ]
+  @UI.selectionField: [ {
+    position: 1270 
+  } ]
+  VesselExName;
+  
+  @UI.identification: [ {
+    position: 1280 
+  } ]
+  @UI.lineItem: [ {
+    position: 1280 
+  } ]
+  @UI.selectionField: [ {
+    position: 1280 
+  } ]
+  WarehouseOfficeBuildings;
+  
+  @EndUserText.label: 'WaterDepth'
+  @UI.identification: [ {
+    position: 1290 , 
+    label: 'WaterDepth'
+  } ]
+  @UI.lineItem: [ {
+    position: 1290 , 
+    label: 'WaterDepth'
+  } ]
+  @UI.selectionField: [ {
+    position: 1290 
+  } ]
+  WaterDepth;
+  
+  @EndUserText.label: 'YearBuilt'
+  @UI.identification: [ {
+    position: 1300 , 
+    label: 'YearBuilt'
+  } ]
+  @UI.lineItem: [ {
+    position: 1300 , 
+    label: 'YearBuilt'
+  } ]
+  @UI.selectionField: [ {
+    position: 1300 
+  } ]
+  YearBuilt;
+  
+  @UI.identification: [ {
+    position: 1310 
+  } ]
+  @UI.lineItem: [ {
+    position: 1310 
+  } ]
+  @UI.selectionField: [ {
+    position: 1310 
+  } ]
+  YearOfForecast1;
+  
+  @UI.identification: [ {
+    position: 1320 
+  } ]
+  @UI.lineItem: [ {
+    position: 1320 
+  } ]
+  @UI.selectionField: [ {
+    position: 1320 
+  } ]
+  YearOfManufacture;
+  
+  @UI.identification: [ {
+    position: 1330 
+  } ]
+  @UI.lineItem: [ {
+    position: 1330 
+  } ]
+  @UI.selectionField: [ {
+    position: 1330 
+  } ]
+  Createdby;
+  
+  @UI.identification: [ {
+    position: 1340 
+  } ]
+  @UI.lineItem: [ {
+    position: 1340 
+  } ]
+  @UI.selectionField: [ {
+    position: 1340 
+  } ]
+  Createdat;
+  
+  @UI.identification: [ {
+    position: 1350 
+  } ]
+  @UI.lineItem: [ {
+    position: 1350 
+  } ]
+  @UI.selectionField: [ {
+    position: 1350 
+  } ]
+  Lastchangedby;
+  
+  @UI.identification: [ {
+    position: 1360 
+  } ]
+  @UI.lineItem: [ {
+    position: 1360 
+  } ]
+  @UI.selectionField: [ {
+    position: 1360 
+  } ]
+  Lastchangedat;
+  
+   @UI.identification: [ {
+    position: 1370,
+    label: 'Location Internal ID'
+  } ]
+  LocationUuid;
+}

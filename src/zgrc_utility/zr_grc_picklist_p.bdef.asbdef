@@ -1,0 +1,77 @@
+managed implementation in class ZBP_R_GRC_PICKLIST_P unique;
+strict ( 2 );
+with draft;
+define behavior for ZR_GRC_PICKLIST_P alias Parent
+persistent table ZTGRC_PICKLIST_P
+draft table zgrc_draft_P
+etag master Lastchangedat
+lock master total etag Lastchangedat
+//lock master
+//early numbering
+late numbering
+authorization master( global )
+
+{
+    field ( readonly )
+   ListId,
+   Createdby,
+   Createdat,
+   Lastchangedby,
+   Lastchangedat;
+
+//  field ( readonly : update )
+//   ListId;
+
+
+  create;
+  update;
+  delete;
+  association _Child { create; with draft; }
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for ZTGRC_PICKLIST_P
+  {
+    ListId = list_id;
+    ListName = list_name;
+    Createdby = createdby;
+    Createdat = createdat;
+    Lastchangedby = lastchangedby;
+    Lastchangedat = lastchangedat;
+  }
+}
+define behavior for ZR_GRC_PICKLIST_C alias Child
+implementation in class ZBP_R_GRC_PICKLST_C unique
+persistent table ztgrc_picklist_c
+draft table zgrc_draft_c
+lock dependent by _Parent
+authorization dependent by _Parent
+etag master LastChangedAt
+//early numbering
+late numbering
+{
+
+ update;
+ delete;
+ field(readonly) ListId,ValueId;
+ association _Parent{ with draft; }
+
+
+      mapping for ztgrc_picklist_c
+  {
+    ListId = list_id;
+    ValueId = value_id;
+    ListValue = list_value;
+    ListDesc = list_desc;
+    Active = active;
+    Language = lang;
+    Createdby = createdby;
+    Createdat = createdat;
+    Lastchangedby = lastchangedby;
+    Lastchangedat = lastchangedat;
+  }
+}
